@@ -32,7 +32,7 @@ form.addEventListener("submit", async (e) => {
     createUi(serverData);
   } catch (error) {
     console.log(error);
-    alert(error.message);
+    alert("The city is Not Found, Please Provide US Zip code");
   }
 });
 const createUi = function (data) {
@@ -45,8 +45,8 @@ const createUi = function (data) {
   <div>Max-Temp ${item.temp_max} °C</div>
   <div>Weather: ${item.weather}</div>
   <div>Description: ${item.description}</div>
-  <div>Feeling: ${item.feeling}</div>
   <div>Date: ${item.date}</div>
+    <div>Feeling: ${item.feeling}</div>
   </div>
   `
   );
