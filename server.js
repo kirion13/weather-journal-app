@@ -16,7 +16,7 @@ app.post("/api", (req, res) => {
   try {
     const {
       main: { temp, temp_min, temp_max },
-      weather: [{ main, description }],
+      weather: [{ main, description, icon }],
       feeling,
     } = req.body;
     baseEndpoint.unshift({
@@ -27,6 +27,7 @@ app.post("/api", (req, res) => {
       description,
       date: new Date(),
       feeling,
+      icon,
     });
     /////////
     res.status(201).json(baseEndpoint);
